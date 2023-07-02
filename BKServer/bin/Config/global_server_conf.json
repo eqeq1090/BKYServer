@@ -1,0 +1,16 @@
+{
+    "MatchServer": {
+        "ManagementPort": 22229,
+        "Config": {
+            "Use": false,
+            "Host": "127.0.0.1:5000",
+            "Branch": "develop",
+            "ServerType": "Normal"
+        },
+        "Compression": "none",
+        "Cheat": true,
+        "Prometheus": {
+            "samplingperiod": 10000
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+{
+    "MatchServer": {
+        "Port": 33333,
+        "ManagementPort": 22224,
+        "ShowApiBodyLog" : true,
+        "Config" : {
+            "Use": false,
+            "Host": "127.0.0.1:5000",
+            "Branch": "develop",
+            "ServerType": "Normal"
+        },
+        "Minio": {
+            "Use": false,
+            "Host": "127.0.0.1:5000"
+        },
+        "Compression": "none",
+        "RabbitMQHost": "127.0.0.1:5000",
+        "HttpClient": {
+            "MaxConnection": 100,
+            "ApiTimeout": 10
+        },
+        "Cheat": true,
+        "Prometheus": {
+            "samplingperiod": 10000
+        },
+		
+		    "GameServerEndPoints": [
+			    "127.0.0.1:22222"
+		    ]
+    }
+}

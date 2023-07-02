@@ -1,0 +1,21 @@
+{
+    "FPS": "45",
+    "ManagementPort": 22225,
+    "NetworkLogFlag": true,
+    "ZK": {
+        "Host": "192.168.0.210:2181",
+        "IsLogging": false
+    },
+    "Minio": {
+        "Use": true,
+        "Host": "192.168.0.210:9000",
+        "Bucket": "latest",
+        "AccessKey": "alltimevilldev",
+        "SecretKey": "alltimevilldev",
+        "LocalPath": "Resource"
+    },
+    "HostName": "local",
+    "WorkerMinThreadCount": 32,
+    "IOThreadMinCount": 32,
+    "ServerKeepAlive": true
+}

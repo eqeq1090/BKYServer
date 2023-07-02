@@ -1,0 +1,11 @@
+{
+    "FPS": "30",
+    "NetworkLogFlag": true,
+    "ZK": {
+        "Use": false,
+        "Host": "127.0.0.1:9000",
+        "UpdatePeriod": 5
+    },
+    "WorkerMinThreadCount": 32,
+    "IOThreadMinCount":32
+}

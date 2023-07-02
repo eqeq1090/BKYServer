@@ -1,0 +1,72 @@
+{
+    "APIServer": {
+        "Port": 8900,
+		"ManagementPort": 22227,
+        "ZK": {
+            "Use": false,
+            "Host": "127.0.0.1:5000"
+        },
+        "ConfigServer": {
+            "Use": false,
+            "Host": "127.0.0.1:5000",
+            "Branch": "develop",
+            "ServerType": "Normal"
+        },
+        "LB": {
+            "Use": false,
+            "Host": "127.0.0.1:5000"
+        },
+        "SysThreadCount": {
+            "min": 32,
+            "max": 32
+        },
+        "Compression": "none",
+        "Prometheus": {
+            "SamplingPeriod": 10000
+        },
+		"Matchmaking": {
+			"Local": {
+				"Solo" : [
+					"villains-local-solo",
+					"villains-local-solo",
+					"villains-local-solo",
+					"villains-local-solo"
+				],
+				"Squad3vs3" : [
+					"villains-local-squad",
+					"villains-local-squad",
+					"villains-local-squad",
+					"villains-local-squad"
+				]
+			},
+			"Dev": {
+				"Solo" : [
+					"villains-dev-solo",
+					"villains-dev-solo",
+					"villains-dev-solo",
+					"villains-dev-solo"
+				],
+				"Squad3vs3" : [
+					"villains-dev-squad3vs3",
+					"villains-dev-squad3vs3",
+					"villains-dev-squad3vs3",
+					"villains-dev-squad3vs3"
+				]
+			},
+			"Asia": {
+				"Solo" : [
+					"villains-asia-solo-0",
+					"villains-asia-solo-1",
+					"villains-asia-solo-2",
+					"villains-asia-solo-3"
+				],
+				"Squad3vs3" : [
+					"villains-asia-squad3vs3-0",
+					"villains-asia-squad3vs3-1",
+					"villains-asia-squad3vs3-2",
+					"villains-asia-squad3vs3-3",
+				]
+			}
+		}
+    }
+}

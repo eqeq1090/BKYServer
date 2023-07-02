@@ -1,0 +1,47 @@
+
+{
+    "Isolation": "RepeatableRead",
+    "Database":[
+        {
+            "DBName": "vill_global_master",
+            "Sharded": false,
+            "ShardSize": 0,
+            "Connections": [
+                {
+                    "Alias": "0",
+                    "User": "root",
+                    "Password": "password",
+                    "Host": "127.0.0.1",
+                    "Port": 3306,
+                    "ShardMin" : 0,
+                    "SharcMax" : 1024
+                }
+            ]
+        },
+        {
+            "DBName": "vill_player_shard",
+            "Sharded": false,
+            "ShardSize": 1024,
+            "Connections": [
+                {
+                    "Alias": "0",
+                    "User": "root",
+                    "Password": "password",
+                    "Host": "127.0.0.1",
+                    "Port": 3306,
+                    "ShardMin" : 0,
+                    "ShardMax" : 511
+                },
+                {
+                    "Alias": "1",
+                    "User": "root",
+                    "Password": "password",
+                    "Host": "127.0.0.1",
+                    "Port": 3306,
+                    "ShardMin" : 512,
+                    "ShardMax" : 1023
+                }
+            ]
+        }
+    ]
+}

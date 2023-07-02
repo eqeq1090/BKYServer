@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Library</OutputType>
+    <IsPublishable>False</IsPublishable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>6</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>6</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.GameLift" Version="3.7.102.64" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.13" />
+    <PackageReference Include="MySql.Data" Version="8.0.32.1" />
+    <PackageReference Include="MySqlConnector" Version="2.2.5" />
+    <PackageReference Include="RestSharp" Version="109.0.1" />
+    <PackageReference Include="SuperSocket" Version="2.0.0-beta.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BKCommonComponent\BKCommonComponent.csproj" />
+    <ProjectReference Include="..\BKDataLoader\BKDataLoader.csproj" />
+    <ProjectReference Include="..\BKNetwork\BKNetwork.csproj" />
+    <ProjectReference Include="..\BKProtocol\BKProtocol.csproj" />
+    <ProjectReference Include="..\BKServerBase\BKServerBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\ServiceFactory\Redis\Factory\" />
+    <Folder Include="Manager\Detail\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MessagePack" Version="2.4.59" />
+    <PackageReference Include="SuperSocket" Version="2.0.0-beta.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BKCommonComponent\BKCommonComponent.csproj" />
+    <ProjectReference Include="..\BKDataLoader\BKDataLoader.csproj" />
+    <ProjectReference Include="..\BKNetwork\BKNetwork.csproj" />
+    <ProjectReference Include="..\BKProtocol\BKProtocol.csproj" />
+    <ProjectReference Include="..\BKServerBase\BKServerBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MsgRegister\PubSubMsgDispatch\" />
+    <Folder Include="MsgRegister\ServerMsgDispatch\" />
+  </ItemGroup>
+
+</Project>

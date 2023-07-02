@@ -1,0 +1,24 @@
+{
+    "MatchServer": {
+        "FlexmatchPort": 40000,
+        "ManagementPort": 22228,
+        "ShowApiBodyLog": true,
+        "Config": {
+            "Use": false,
+            "Host": "127.0.0.1:5000",
+            "Branch": "develop",
+            "ServerType": "Normal"
+        },
+        "UseApiLB": true,
+        "ApiLBHost": "127.0.0.1:8900",
+        "Compression": "none",
+        "HttpClient": {
+            "MaxConnection": 100,
+            "ApiTimeout": 10
+        },
+        "Cheat": true,
+        "Prometheus": {
+            "samplingperiod": 10000
+        }
+    }
+}

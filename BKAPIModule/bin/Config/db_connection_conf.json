@@ -1,0 +1,46 @@
+
+{
+    "Database":[
+        {
+            "DBName": "account",
+            "Sharded": false,
+            "ShardSize": 0,
+            "Connections": [
+                {
+                    "Alias": "0",
+                    "User": "root",
+                    "Password": "password",
+                    "Host": "127.0.0.1",
+                    "Port": 3306,
+                    "ShardMin" : 0,
+                    "SharcMax" : 1024
+                }
+            ]
+        },
+        {
+            "DBName": "player",
+            "Sharded": true,
+            "ShardSize": 1024,
+            "Connections": [
+                {
+                    "Alias": "0",
+                    "User": "root",
+                    "Password": "password",
+                    "Host": "127.0.0.1",
+                    "Port": 3306,
+                    "ShardMin" : 0,
+                    "SharcMax" : 511
+                },
+                {
+                    "Alias": "1",
+                    "User": "root",
+                    "Password": "password",
+                    "Host": "127.0.0.1",
+                    "Port": 3306,
+                    "ShardMin" : 512,
+                    "SharcMax" : 1023
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+{
+    "Redis": {
+        "session": {
+            "Type": "session",
+            "BindServerTypes": [
+                "APIServer",
+                "GameServer"
+            ],
+            "RedisServiceTypes": [
+                "Command"
+            ],
+            "ShardSize": 1024,
+            "ConnectionPoolSize": 4,
+            "Connections": [
+                {
+                    "ID": 0,
+                    "Sentinel": "",
+                    "host": [
+                        "127.0.0.1:16379"
+                    ],
+                    "password": "",
+                    "connectiontimeout": 5000,
+                    "ShardMin": 0,
+                    "ShardMax": 1023
+                }
+            ]
+        },
+        "presence": {
+            "Type": "presence",
+            "BindServerTypes": [
+                "APIServer",
+                "GameServer"
+            ],
+            "RedisServiceTypes": [
+                "Command"
+            ],
+            "ShardSize": 1024,
+            "ConnectionPoolSize": 4,
+            "Connections": [
+                {
+                    "ID": 0,
+                    "Sentinel": "",
+                    "host": [
+                        "127.0.0.1:16379"
+                    ],
+                    "password": "",
+                    "connectiontimeout": 5000,
+                    "ShardMin": 0,
+                    "ShardMax": 1023
+                }
+            ]
+        },
+        "friendlyRoom": {
+            "Type": "friendlyRoom",
+            "BindServerTypes": [
+                "GameServer",
+                "MatchServer"
+            ],
+            "RedisServiceTypes": [
+                "Command",
+                "Pubsub"
+            ],
+            "ShardSize": 1024,
+            "ConnectionPoolSize": 4,
+            "Connections": [
+                {
+                    "ID": 0,
+                    "Sentinel": "",
+                    "host": [
+                        "127.0.0.1:16379"
+                    ],
+                    "password": "",
+                    "connectiontimeout": 5000,
+                    "ShardMin": 0,
+                    "ShardMax": 1023
+                }
+            ]
+        },
+        "reconnection": {
+            "Type": "reconnection",
+            "BindServerTypes": [
+                "GameServer"
+            ],
+            "RedisServiceTypes": [
+                "Command"
+            ],
+            "ShardSize": 1024,
+            "ConnectionPoolSize": 4,
+            "Connections": [
+                {
+                    "ID": 0,
+                    "Sentinel": "",
+                    "host": [
+                        "127.0.0.1:16379"
+                    ],
+                    "password": "",
+                    "connectiontimeout": 5000,
+                    "ShardMin": 0,
+                    "ShardMax": 1023
+                }
+            ]
+        },
+        "chat_private": {
+            "Type": "chat_private",
+            "BindServerTypes": [
+                "GameServer"
+            ],
+            "RedisServiceTypes": [
+                "Pubsub"
+            ],
+            "ShardSize": 0,
+            "ConnectionPoolSize": 0,
+            "Connections": [
+                {
+                    "ID": 0,
+                    "Sentinel": "",
+                    "Host": [
+                        "127.0.0.1:16379"
+                    ],
+                    "Password": "",
+                    "ConnectionTimeout": 5000,
+                    "ShardMin": 0,
+                    "ShardMax": 511
+                }
+            ]
+        },
+        "chat_team": {
+            "Type": "chat_team",
+            "BindServerTypes": [
+                "GameServer"
+            ],
+            "RedisServiceTypes": [
+                "Pubsub"
+            ],
+            "ShardSize": 0,
+            "ConnectionPoolSize": 0,
+            "Connections": [
+                {
+                    "ID": 0,
+                    "Sentinel": "",
+                    "Host": [
+                        "127.0.0.1:16379"
+                    ],
+                    "Password": "",
+                    "ConnectionTimeout": 5000,
+                    "ShardMin": 0,
+                    "ShardMax": 511
+                }
+            ]
+        },
+        "friend": {
+            "Type": "friend",
+            "BindServerTypes": [
+                "GameServer"
+            ],
+            "RedisServiceTypes": [
+                "Pubsub"
+            ],
+            "ShardSize": 0,
+            "ConnectionPoolSize": 0,
+            "Connections": [
+                {
+                    "ID": 0,
+                    "Sentinel": "",
+                    "Host": [
+                        "127.0.0.1:16379"
+                    ],
+                    "Password": "",
+                    "ConnectionTimeout": 5000,
+                    "ShardMin": 0,
+                    "ShardMax": 511
+                }
+            ]
+        }
+    }
+}

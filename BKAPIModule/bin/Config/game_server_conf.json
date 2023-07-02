@@ -1,0 +1,32 @@
+
+{
+    "GameServer": {
+        "Port": 22222,
+        "ManagementPort": 22224,
+        "ShowApiBodyLog" : true,
+        "Config" : {
+            "Use": false,
+            "Host": "127.0.0.1:5000",
+            "Branch": "develop",
+            "ServerType": "Normal"
+        },
+        "LB": {
+            "Use": false,
+            "Host": "127.0.0.1:5000"
+        },
+        "Minio": {
+            "Use": false,
+            "Host": "127.0.0.1:5000"
+        },
+        "Compression": "none",
+        "RabbitMQHost": "127.0.0.1:5000",
+        "HttpClient": {
+            "MaxConnection": 100,
+            "ApiTimeout": 10
+        },
+        "Cheat": true,
+        "Prometheus": {
+            "samplingperiod": 10000
+        }
+    }
+}

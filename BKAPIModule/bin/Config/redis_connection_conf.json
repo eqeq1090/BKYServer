@@ -1,0 +1,49 @@
+{
+    "Redis": [
+        {
+            "Type": "session",
+            "ShardSize": 1024,
+            "Connections": [
+                {
+                    "id": 0,
+                    "host": [
+                        "127.0.0.1:16379",
+                        "127.0.0.1:26379"
+                    ],
+                    "password": "",
+                    "connectiontimeout": 5000,
+                    "shardmin": 0,
+                    "sharcmax": 1023
+                }
+            ]
+        },
+        {
+            "Type": "team",
+            "ShardSize": 1024,
+            "Connections": [
+                {
+                    "ID": 0,
+                    "Host": [
+                        "127.0.0.1:16379",
+                        "127.0.0.1:26379"
+                    ],
+                    "Password": "",
+                    "ConnectionTimeout": 5000,
+                    "ShardMin": 0,
+                    "ShardMax": 511
+                },
+                {
+                    "ID": 1,
+                    "Host": [
+                        "127.0.0.1:16379",
+                        "127.0.0.1:26379"
+                    ],
+                    "Password": "",
+                    "ConnectionTimeout": 5000,
+                    "ShardMin": 512,
+                    "ShardMax": 1023
+                }
+            ]
+        }
+    ]
+}
