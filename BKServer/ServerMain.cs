@@ -16,6 +16,7 @@ using BKNetwork.API;
 using BKNetwork.Serialize;
 using BKProtocol;
 using BKWebAPIComponent;
+using System.Runtime.InteropServices;
 
 namespace BKServer
 {
@@ -90,17 +91,9 @@ namespace BKServer
                 {
                     case ServerMode.AllInOne:
                         Component.AddComponent<GameServerComponent>(GameServerComponent.Instance);
-                        //Component.AddComponent<MatchServerComponent>(MatchServerComponent.Instance);
-                        //Component.AddComponent<GlobalServerComponent>(GlobalServerComponent.Instance);
                         Component.AddComponent<ManagementComponent>(new ManagementComponent());
                         Component.AddComponent<APIDispatchComponent>(APIDispatchComponent.Instance);
-                        //Component.AddComponent<APIServerComponent>(APIServerComponent.Instance);
-                        break;
-
-                    case ServerMode.MatchServer:
-                        //Component.AddComponent<ManagementComponent>(new ManagementComponent());
-                        //Component.AddComponent<MatchServerComponent>(MatchServerComponent.Instance);
-                        //Component.AddComponent<APIDispatchComponent>(APIDispatchComponent.Instance);
+                        Component.AddComponent<APIServerComponent>(APIServerComponent.Instance);
                         break;
 
                     case ServerMode.GameServer:
@@ -113,10 +106,6 @@ namespace BKServer
                         Component.AddComponent<ManagementComponent>(new ManagementComponent());
                         Component.AddComponent<APIServerComponent>(APIServerComponent.Instance);
                         break;
-                    //case ServerMode.GlobalServer:
-                    //    Component.AddComponent<GlobalServerComponent>(GlobalServerComponent.Instance);
-                    //    Component.AddComponent<APIDispatchComponent>(APIDispatchComponent.Instance);
-                    //    Component.AddComponent<ManagementComponent>(new ManagementComponent());
 
                     default:
                         throw new InvalidOperationException($"not supported serverMode: {serverMode}");
@@ -149,7 +138,8 @@ namespace BKServer
             Console.WriteLine($"OnUnhandledException");
             CoreLog.Critical.LogError($"Server died, OnUnhandleException, exception: {e.ToString()}");
 
-            // TODO: dump.
+            // 비정상 종료시 덤프를 남김
+            MiniDump.CurrentDomain_UnhandledException(sender, e);
         }
 
         private static void OnProcessExit(object? sender, EventArgs e)
